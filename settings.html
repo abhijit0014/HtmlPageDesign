@@ -14,6 +14,10 @@
             /* Uses Bootstrap's primary color */
             color: black;
         }
+        .input-hover:hover{
+            background-color: #EAEFEF !important;
+            border-color: red !important;
+        }
 
         .custom-scroll {
             /* 1. Standard Method: Firefox & modern cross-browser baseline */
@@ -25,10 +29,7 @@
                 width: 8px;   /* Width of vertical scrollbar */
                 height: 8px;  /* Height of horizontal scrollbar */
             }
-        }   
-        .htmbody {
-            min-width: 1000px; 
-        }  
+        }     
     </style>
 </head>
 
@@ -151,7 +152,7 @@
             </div>
 
             <!--================================= Content Pan ======================================-->
-            <div class="col-9 col-xl-10 offset-3 offset-xl-2 min-vh-100 z-1">
+            <div class="col-9 col-xl-10 offset-3 offset-xl-2 min-vh-100 z-1" id="jsid-settings">
                 <div class="m-5">
                     <div class="mb-5">
                         <h2>Settings</h2>
@@ -169,7 +170,12 @@
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <input type="text" class="form-control" id="inputfieldid" placeholder="input value">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="inputfieldidpath0" placeholder="input value" disabled>
+                                        <button class="input-group-text" value="edit" id="inputEditButton">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +192,12 @@
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <input type="text" class="form-control" id="inputfieldid" placeholder="input value">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="inputfieldidpath1" placeholder="input value" disabled>
+                                        <button class="input-group-text" value="edit" id="inputEditButton">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -203,12 +214,17 @@
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>NR</option>
-                                        <option value="1">LTE</option>
-                                        <option value="2">UMTS</option>
-                                        <option value="3">GSM</option>
-                                    </select>
+                                     <div class="input-group">
+                                        <select class="form-select" aria-label="Default select example" disabled>
+                                            <option selected>NR</option>
+                                            <option value="1">LTE</option>
+                                            <option value="2">UMTS</option>
+                                            <option value="3">GSM</option>
+                                        </select>
+                                        <button class="input-group-text" value="edit" id="inputEditButton">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>                                   
                                 </div>
                             </div>
                         </div>
@@ -220,19 +236,37 @@
                                 <div class="d-flex col">
                                     <div class="me-3"><i class="bi bi-check fs-2"></i></div>
                                     <div class="flex-grow-1">
-                                        <div class="">Switch</div>
+                                        <div class="">Geolocation</div>
                                         <div class="small text-muted">Switch option to enable and disable</div>
                                     </div>
                                 </div>
                                 <div class="col-7">
-                                    <div class="form-check form-switch float-end">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    <div class="form-check form-switch h4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div> 
+
+                    <div class="card border-0 bg-light mt-1">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="d-flex col">
+                                    <div class="me-3"><i class="bi bi-check fs-2"></i></div>
+                                    <div class="flex-grow-1">
+                                        <div class="">Layers</div>
+                                        <div class="small text-muted">Switch option to enable and disable</div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="form-check form-switch h4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
 
                 </div>
             </div>
@@ -242,7 +276,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
+    
+    <script src="./js/jquery-4.0.0.min.js"></script>
+    // settingInputValue
+    <script>
+        $("#jsid-settings #inputEditButton").on({
+            click: function () {
+                var inputButtonValue = $(this).val();
+                // input edit
+                if (inputButtonValue =="edit"){
+                    $(this).val('done');
+                    $(this).addClass("bg-success text-white");
+                    $(this).html('<i class="bi bi-check-lg"></i>')
+                    $(this).parent().find('input, select').prop('disabled', false);
+                    //$(this).parent().find('select').prop('disabled', false);
+                }
+                // input submit
+                if (inputButtonValue =="done"){
+                    $(this).val('edit');
+                    $(this).removeClass("bg-success text-white");
+                    $(this).html('<i class="bi bi-pencil-square"></i>')
+                    $(this).parent().find('input, select').prop('disabled', true);
+                    var inputId = $(this).parent().find('input, select').id;
+                    //alert(inputId);
+                    //$(this).parent().find('select').prop('disabled', true);
+                }
+            }
+        });
+    </script>
 
 </body>
 
