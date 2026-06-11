@@ -9,12 +9,11 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
-        .product {
-            border: 1px solid #fff !important;
+        section {
+            scroll-margin-top: 100px; /* match your navbar height */
         }
-
-        .product:hover {
-            border: 1px solid #D3DAD9 !important;
+        .color-brand-primary{
+            color: #121358;
         }
     </style>
 </head>
@@ -46,91 +45,241 @@
         <div class="my-5 bg-light rounded p-5 py-2 pb-4">
             <div class="d-flex align-items-center">
                 <div class="flex-grow-1">
-                    <div class="h1 mb-3">Product</div>
+                    <div class="h1 mb-3 color-brand-primary">Product</div>
                     <div class="">
-                        At TEOCO, we believe in simplifying complex business problems and workflows. <br />
+                        At ABCD, we believe in simplifying complex business problems and workflows. <br />
                         Our rich set of smart solutions increase revenues, margins, subscriber value and profitability.
                     </div>
                 </div>
                 <div class="text-center mx-5">
-                    <i class="bi bi-broadcast-pin text-info" style="font-size: 10rem;"></i>
+                    <i class="bi bi-broadcast-pin color-brand-primary" style="font-size: 10rem;"></i>
                 </div>
             </div>
         </div>
 
         <div class="d-flex text-center my-5">
-            <div class="flex-fill"><i class="bi bi-view-list"></i> Overview</div>
-            <div class="flex-fill"><i class="bi bi-list"></i> Modules</div>
-            <div class="flex-fill"><i class="bi bi-list-check"></i> Key Benefits</div>
-            <div class="flex-fill"><i class="bi bi-list-check"></i> Use Cases</div>
+            <div class="flex-fill">
+                <a href="#productOverview" class="btn" role="button">
+                    <i class="bi bi-view-list"></i> Overview
+                </a>
+            </div>
+            <div class="flex-fill">
+                <a href="#productModules" class="btn" role="button">
+                    <i class="bi bi-list"></i> Modules
+                </a>
+            </div>
+            <div class="flex-fill">
+                <a href="#productKeyBenefits" class="btn" role="button">
+                    <i class="bi bi-list-check"></i> Key Benefits
+                </a>
+            </div>
+        
+            <div class="flex-fill">
+                <a href="#productUseCases" class="btn" role="button">
+                    <i class="bi bi-list-check"></i> Use Cases
+                </a>
+            </div>
         </div>
 
         <div class="my-5 p-5">
-            <div class="text-center">
-                <div class="h3 mb-3">Modules</div>
-                <div class="">
-                    At TEOCO, we believe in simplifying complex business problems and workflows. <br />
-                    Our rich set of smart solutions increase revenues, margins, subscriber value and profitability.
-                </div>
-            </div>
-            <div class="row g-5 mt-5">
-                <div class="col-6">
-                    <div><i class="bi bi-receipt-cutoff h3 text-success"></i></div>
-                    <div class="h6 my-3">BillTrak SmartMatch</div>
-                    <div>
-                        Designed for users of BillTrak, TEOCO’s flagship invoice management system. This module helps
-                        CSPs eliminate costly errors and increase data reliability. Leveraging machine learning and
-                        geo-coding, SmartMatch normalizes wholesale circuit data to improve and enhance the matching of
-                        invoiced circuits to circuit inventory.
+
+            <!------------------ Modules ---------------->
+            <section id="productModules">
+                <div class="row g-5">
+                    <div class="col-4">
+                        <div class="h4 mb-3">Modules</div>
+                        <div class="">
+                            At ABCD, we believe in simplifying complex business problems and workflows. <br />
+                            Our rich set of smart solutions increase revenues, margins, subscriber value and
+                            profitability.
+                        </div>
+                    </div>
+                    <div class="col-8">
+
+                        <div class="pb-3">
+                            <div class="h5 mb-2">BillTrak SmartMatch</div>
+                            <div>
+                                Designed for users of BillTrak, ABCD’s flagship invoice management system. This module
+                                helps
+                                CSPs eliminate costly errors and increase data reliability. Leveraging machine learning
+                                and
+                                geo-coding, SmartMatch normalizes wholesale circuit data to improve and enhance the
+                                matching
+                                of
+                                invoiced circuits to circuit inventory.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Contract Management</div>
+                            <div>
+                                Gain easy access to contract data, vendor rate sheets, and more for efficient tracking
+                                and
+                                comparison of vendor contract terms and conditions. Seamlessly integrates with other
+                                SmartCircuit modules to detect, track, and claim credits for SLA violations.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Circuit Inventory</div>
+                            <div>
+                                Maintain accurate insights into every wholesale circuit throughout its lifecycle – from
+                                contract
+                                to revenue – and visualize it all with just a click. Enables users to quickly generate
+                                map-based
+                                views of the telecom network for easy analysis.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">BillTrak SmartMatch</div>
+                            <div>
+                                Designed for users of BillTrak, ABCD’s flagship invoice management system. This module
+                                helps
+                                CSPs eliminate costly errors and increase data reliability. Leveraging machine learning
+                                and
+                                geo-coding, SmartMatch normalizes wholesale circuit data to improve and enhance the
+                                matching
+                                of
+                                invoiced circuits to circuit inventory.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">Contract Management</div>
+                            <div>
+                                Gain easy access to contract data, vendor rate sheets, and more for efficient tracking
+                                and
+                                comparison of vendor contract terms and conditions. Seamlessly integrates with other
+                                SmartCircuit modules to detect, track, and claim credits for SLA violations.
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="h5 mb-2">Circuit Inventory</div>
+                            <div>
+                                Maintain accurate insights into every wholesale circuit throughout its lifecycle – from
+                                contract
+                                to revenue – and visualize it all with just a click. Enables users to quickly generate
+                                map-based
+                                views of the telecom network for easy analysis.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-6">
-                    <div><i class="bi bi-receipt-cutoff h3 text-info"></i></div>
-                    <div class="h6 my-3">Contract Management</div>
-                    <div>
-                        Gain easy access to contract data, vendor rate sheets, and more for efficient tracking and
-                        comparison of vendor contract terms and conditions. Seamlessly integrates with other
-                        SmartCircuit modules to detect, track, and claim credits for SLA violations.
+            </section>
+
+            <!------------------ Key Benefits ---------------->
+            <section id="productKeyBenefits">
+                <div class="row g-5 mt-5">
+                    <div class="col-4">
+                        <div class="h4 mb-3">Key Benefits</div>
+                        <div class="">
+                            Enjoy the benefits of full circuit lifecycle management
+                        </div>
+                    </div>
+                    <div class="col-8">
+
+                        <div class="pb-3">
+                            <div class="h5 mb-2">Protects Margins</div>
+                            <div>
+                                Instantly link wholesale circuits to contracts and SLAs, for improved financial
+                                oversight.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Fully Integrated</div>
+                            <div>
+                                For end-to-end management of the circuit lifecycle and a more seamless user experience.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Auditable Workflows</div>
+                            <div>
+                                Ensure tighter controls – with auditable workflows and approval processes.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">Decision-Ready Analytics & Reporting</div>
+                            <div>
+                                Provide valuable insights for internal organizations and external business partners.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">Electronic Record Compliance</div>
+                            <div>
+                                Streamline and simplify Sarbanes-Oxley (SOX) and other regulatory reporting.
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="h5 mb-2">Carrier-Grade Scalability</div>
+                            <div>
+                                Built on ABCD’s SmartHub platform, designed for hyper-scalable, data-intensive
+                                processing
+                                and analytical workloads.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-6">
-                    <div><i class="bi bi-alt h3 text-primary"></i></div>
-                    <div class="h6 my-3">Circuit Inventory</div>
-                    <div>
-                        Maintain accurate insights into every wholesale circuit throughout its lifecycle – from contract
-                        to revenue – and visualize it all with just a click. Enables users to quickly generate map-based
-                        views of the telecom network for easy analysis.
+            </section>
+            <!------------------ Use Cases ---------------->
+            <section id="productUseCases">
+                <div class="row g-5 mt-5">
+                    <div class="col-4">
+                        <div class="h4 mb-3">Use Cases</div>
+                        <div class="">
+                            Streamline and manage the full circuit lifecycle and improve financial oversight of the
+                            network.
+                        </div>
+                    </div>
+                    <div class="col-8">
+
+                        <div class="pb-3">
+                            <div class="h5 mb-2">Protects Margins</div>
+                            <div>
+                                Instantly link wholesale circuits to contracts and SLAs, for improved financial
+                                oversight.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Fully Integrated</div>
+                            <div>
+                                For end-to-end management of the circuit lifecycle and a more seamless user experience.
+                            </div>
+                        </div>
+
+                        <div class="py-3">
+                            <div class="h5 mb-2">Auditable Workflows</div>
+                            <div>
+                                Ensure tighter controls – with auditable workflows and approval processes.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">Decision-Ready Analytics & Reporting</div>
+                            <div>
+                                Provide valuable insights for internal organizations and external business partners.
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="h5 mb-2">Electronic Record Compliance</div>
+                            <div>
+                                Streamline and simplify Sarbanes-Oxley (SOX) and other regulatory reporting.
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="h5 mb-2">Carrier-Grade Scalability</div>
+                            <div>
+                                Built on ABCD’s SmartHub platform, designed for hyper-scalable, data-intensive
+                                processing
+                                and analytical workloads.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-6">
-                    <div><i class="bi bi-align-bottom h3 text-warning"></i></div>
-                    <div class="h6 my-3">BillTrak SmartMatch</div>
-                    <div>
-                        Designed for users of BillTrak, TEOCO’s flagship invoice management system. This module helps
-                        CSPs eliminate costly errors and increase data reliability. Leveraging machine learning and
-                        geo-coding, SmartMatch normalizes wholesale circuit data to improve and enhance the matching of
-                        invoiced circuits to circuit inventory.
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div><i class="bi bi-receipt-cutoff h3 text-danger"></i></div>
-                    <div class="h6 my-3">Contract Management</div>
-                    <div>
-                        Gain easy access to contract data, vendor rate sheets, and more for efficient tracking and
-                        comparison of vendor contract terms and conditions. Seamlessly integrates with other
-                        SmartCircuit modules to detect, track, and claim credits for SLA violations.
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div><i class="bi bi-align-start h3 text-success"></i></div>
-                    <div class="h6 my-3">Circuit Inventory</div>
-                    <div>
-                        Maintain accurate insights into every wholesale circuit throughout its lifecycle – from contract
-                        to revenue – and visualize it all with just a click. Enables users to quickly generate map-based
-                        views of the telecom network for easy analysis.
-                    </div>
-                </div>                
-            </div>
+            </section>
         </div>
 
     </div>
